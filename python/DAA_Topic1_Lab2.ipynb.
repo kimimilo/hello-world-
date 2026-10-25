@@ -1,0 +1,623 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOcF7wGHSmkwITCf9aa1sdo",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kimimilo/hello-world-/blob/main/python/DAA_Topic1_Lab2.ipynb.\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gp31qetmrZtA",
+        "outputId": "ac4b1e27-e5ec-4994-c088-21d9b0172cff"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{}\n",
+            "{'first_name': 'Elly', 'last_name': 'H', 'age': 33, 'tattoos': False}\n",
+            "Last name: H\n",
+            "Number of fields: 4\n",
+            "User has no email\n"
+          ]
+        }
+      ],
+      "source": [
+        "empty = {}\n",
+        "print(empty)\n",
+        "\n",
+        "elly = {\n",
+        "    \"first_name\": \"Elly\",\n",
+        "    \"last_name\": \"H\",\n",
+        "    \"age\": 33,\n",
+        "    \"tattoos\": False,\n",
+        "}\n",
+        "print(elly)\n",
+        "print(\"Last name:\", elly[\"last_name\"])\n",
+        "print(\"Number of fields:\", len(elly))\n",
+        "\n",
+        "email = elly.get(\"email\")\n",
+        "if email is None:\n",
+        "    print(\"User has no email\")\n",
+        "else:\n",
+        "    print(\"Email address is:\", email)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "empty = {}\n",
+        "print(empty)\n",
+        "\n",
+        "elly = {\n",
+        "    \"first_name\": \"Elly\",\n",
+        "    \"last_name\": \"H\",\n",
+        "    \"age\": 33,\n",
+        "    \"tattoos\": False\n",
+        "}\n",
+        "print(elly)\n",
+        "print(\"last name:\", elly[\"last_name\"])\n",
+        "print(\"number of fields:\", len(elly))\n",
+        "\n",
+        "email = elly.get(\"email\")\n",
+        "if email is None:\n",
+        "    print(\"user has no email\")\n",
+        "else:\n",
+        "    print(\"email address is:\", email)"
+      ],
+      "metadata": {
+        "id": "dRTG2IHmbXws",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "75c99934-9151-4f18-b1bf-1f89af820173"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{}\n",
+            "{'first_name': 'Elly', 'last_name': 'H', 'age': 33, 'tattoos': False}\n",
+            "last name: H\n",
+            "number of fields: 4\n",
+            "user has no email\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a, b, c = 5, 3, 5\n",
+        "\n",
+        "if b < a:\n",
+        "  print(f\"{b} is less than {a}\")\n",
+        "\n",
+        "if a < b:\n",
+        "  print(f\"{0} is less than {1}\". format(a, b))\n",
+        "else:\n",
+        "  print(f\"{0} is greater than or equal to {1}\".format(a,b)) #this is what u can do if you're not using an elif\n",
+        "\n",
+        "if a < c:\n",
+        "  print(f\"{0} is greater than {3}\")\n",
+        "elif a > c:\n",
+        "  print(f\"{0} is less than {3}\")\n",
+        "else:\n",
+        "  print(\"a and c are equal\")                                #this why dont need use or \"equal to\" because there's an elif to check another posibilities, for more than 2 outcomes\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "_iODuqnfbXsy",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "7627fbed-dd5f-43e2-e356-020270c699d5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3 is less than 5\n",
+            "0 is greater than or equal to 1\n",
+            "a and c are equal\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# generating sequences with range\n",
+        "\n",
+        "print(list(range(10)))\n",
+        "print(list(range(1, 10, 3))) # start = the number to start at, stop = the number to stop at, step = how much to increase/decrease\n",
+        "                             # stop doesnt include the number btw\n",
+        "print(list(range(2, 29, 2)))\n",
+        "\n",
+        "for i in range(10):\n",
+        "    print(\"iteration\", i)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "UlXhOJS_bXlf",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1e77226f-9b34-4a71-e8a4-904afe8c7f0f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+            "[1, 4, 7]\n",
+            "[2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]\n",
+            "iteration 0\n",
+            "iteration 1\n",
+            "iteration 2\n",
+            "iteration 3\n",
+            "iteration 4\n",
+            "iteration 5\n",
+            "iteration 6\n",
+            "iteration 7\n",
+            "iteration 8\n",
+            "iteration 9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Loops & Loop Control: break, continue, pass\n",
+        "# use for when you know what you are iterating over (a list, a range)\n",
+        "# use while when you don't know how many rounds you need, for example reading input until the user types \"quit\"\n",
+        "\n",
+        "\n",
+        "n = 1\n",
+        "while n <= 100:\n",
+        "      print(n, end = \"\")\n",
+        "      n = n + 1\n",
+        "      if n > 10:\n",
+        "        break\n",
+        "print(\"\\nThe while loop ends here\") #\\n makes a new line since end = \"\"\n",
+        "\n",
+        "for num in range(10):\n",
+        "    if num == 4:                    # check if its equal to, output = true/false\n",
+        "        continue                    # used to skip the current loop iteration when a certain condition is met\n"
+      ],
+      "metadata": {
+        "id": "5NDuJliWbXcI",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "7a5ac482-a74c-4afe-a537-155179d15a93"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "12345678910\n",
+            "The while loop ends here\n",
+            "chosen number: 0\n",
+            "chosen number: 1\n",
+            "chosen number: 2\n",
+            "chosen number: 3\n",
+            "chosen number: 5\n",
+            "chosen number: 6\n",
+            "chosen number: 7\n",
+            "chosen number: 8\n",
+            "chosen number: 9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# pass does NOT skip anything: the print below still runs for 4\n",
+        "for num in range(6):\n",
+        "    if num == 4:\n",
+        "        pass                     # placeholder: \"handle 4 later\" is to let you leave a block of code empty without causing an error\n",
+        "    print(\"Number:\", num)\n",
+        "\n",
+        "# Loop with an index using range(len(...)) or, more simply, enumerate()\n",
+        "# enumerate essentilly gives both index position & word\n",
+        "items = [\"hi\", \"my\", \"name\", \"is\", \"kimi\"]\n",
+        "for i, word in enumerate(items): # word in items gives each word\n",
+        "                                 # + enumerate gives each word & its position\n",
+        "    print(i, word)"
+      ],
+      "metadata": {
+        "id": "wP1PALoNbXJK",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a1c2dbd4-87a6-4752-85b1-dedaea80208c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Number: 0\n",
+            "Number: 1\n",
+            "Number: 2\n",
+            "Number: 3\n",
+            "Number: 4\n",
+            "Number: 5\n",
+            "0 hi\n",
+            "1 my\n",
+            "2 name\n",
+            "3 is\n",
+            "4 kimi\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Dictionaries in Depth: Keys, Values, Items & Nesting\n",
+        "\n",
+        "faith = {\"first_name\": \"faith\", \"last_name\": \"boy\", \"age\": 19, \"tattoos\": False}\n",
+        "print(faith.keys())                           # lets me loop through a dictionarey to go through every key and value\n",
+        "print(faith.values())\n",
+        "for key, value in faith.items():\n",
+        "    print(f\"key = {key}, value = {value}\")\n",
+        "\n",
+        "faith[\"last_name\"] = \"kristani\"               # update\n",
+        "faith[\"email\"] = \"faithkristaniboy@gmail.com\" # add\n",
+        "print(\"after update:\", faith)\n",
+        "del faith[\"email\"]                            # delete\n",
+        "print(\"after delete:\", faith)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zWRuUqdoWT9T",
+        "outputId": "48dc4a5a-90aa-49f4-b7f5-e0f5c101bf70"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "dict_keys(['first_name', 'last_name', 'age', 'tattoos'])\n",
+            "dict_values(['faith', 'boy', 19, False])\n",
+            "key = first_name, value = faith\n",
+            "key = last_name, value = boy\n",
+            "key = age, value = 19\n",
+            "key = tattoos, value = False\n",
+            "after update: {'first_name': 'faith', 'last_name': 'kristani', 'age': 19, 'tattoos': False, 'email': 'faithkristaniboy@gmail.com'}\n",
+            "after delete: {'first_name': 'faith', 'last_name': 'kristani', 'age': 19, 'tattoos': False}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "school_records = {\n",
+        "    \"001\": {\"name\": \"Ryan\", \"grade\": 12, \"avg_score\": 95},\n",
+        "    \"002\": {\"name\": \"Jaslyn\", \"grade\": 12, \"avg_score\": 90},\n",
+        "    \"003\": {\"name\": \"Ronald\", \"grade\": 10, \"avg_score\": 55},\n",
+        "}\n",
+        "\n",
+        "# Nested access: outer key, then inner key\n",
+        "print(school_records[\"001\"][\"name\"])\n",
+        "school_records[\"001\"][\"name\"] = \"Ryan Tan\"\n",
+        "\n",
+        "# Present every record with a double loop\n",
+        "for student_id, info in school_records.items():\n",
+        "    print(\"\\nStudent ID:\", student_id)\n",
+        "    for key in info:\n",
+        "        print(f\"  {key}: {info[key]}\")"
+      ],
+      "metadata": {
+        "id": "eA1WrQdFeZJa"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Functions: Defining and Calling\n",
+        "# a named gorup of statements that performs one task\n",
+        "# does so by breaking down a program into small testable, reusable modules instead of 1 long script\n",
+        "\n",
+        "import math                                           # import math is a built in python tool so that tools like math.pi can be used\n",
+        "                                                      # tools for math (math), timestamps (datetime), file handling (os), random numbers (random) must import them before use\n",
+        "\n",
+        "def addition(num1, num2):                             # things inside () are called parameters\n",
+        "    total = num1 + num2\n",
+        "    return total\n",
+        "\n",
+        "def circle_properties(radius):\n",
+        "    \"\"\"return the area & circumference of a circle\"\"\" # spans new lines naturally & preserves formatting\n",
+        "    area = math.pi * radius ** 2                      # ** means to power/square smth\n",
+        "    circumference = 2 *math.pi * radius\n",
+        "    return area, circumference\n",
+        "\n",
+        "def is_palindrome(word):\n",
+        "    word = word.lower().replace(\" \",\"\")\n",
+        "    return word == word[::-1]                         # [:: -1 reverses a string to set up palindrome to check if it is]\n",
+        "\n",
+        "print(addition(5,7))\n",
+        "area, circumference = circle_properties (5)\n",
+        "print(f\"area: {area:.2f}, circumference: {circumference:.2f}\")\n",
+        "print(is_palindrome(\"taco cat\"),                      # chekcking if when read backwords = the same as when reading normally\n",
+        "                                                      # used for# palindrome che handling read world strings & for string slicing\n",
+        "is_palindrome(\"data\"))"
+      ],
+      "metadata": {
+        "id": "zr2BHrymgS5q",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5c3afc36-7354-43d9-b3eb-c68245fae60b"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "12\n",
+            "area: 78.54, circumference: 31.42\n",
+            "True False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Functions: defining & calling\n",
+        "\n",
+        "import random\n",
+        "\n",
+        "def magic_8_ball():                                           # don't need parameters when it doesnt need info from the outside\n",
+        "                                                              # like when you provide a list for it to choose from instead\n",
+        "                                                              # only use when it needs a list/numbers supplied from outside that block of code\n",
+        "    responses = [\"Yes\", \"No\", \"It is certain\", \"without a doubt\", \"reply hazy\", \"try again\", \"don't count on it\", \"outlook not so good\", \" you may rely on it\"]\n",
+        "    return random.choice(responses)\n",
+        "\n",
+        "def roll_dice():\n",
+        "    die1 = random.randint(1,6)                                # only can use after importing random\n",
+        "                                                              # stands for random int to generate within the range, inclusive of both end points\n",
+        "    die2 = random.randint(1,6)\n",
+        "    return die1, die2, die1 + die2\n",
+        "\n",
+        "print(\"am i bad?\", magic_8_ball())\n",
+        "print(\"dice roll (die 1, die 2, total):\", roll_dice())"
+      ],
+      "metadata": {
+        "id": "ve_UxIyrgSct",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9c4bc801-4518-4c34-fde7-56e84dd47cb0"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "am i bad? without a doubt\n",
+            "dice roll (die 1, die 2, total): (4, 3, 7)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# practice set: list, tuples, sorting, & converting\n",
+        "\n",
+        "fruits = [\"apple\", \"orange\", \"banana\"]            # is a list because of the []\n",
+        "fruits.append(\"tomato\")                           # append to add in an element in a list\n",
+        "                                                  # remove to remove an element in a list\n",
+        "fruits.remove(\"apple\")\n",
+        "print(fruits)\n",
+        "\n",
+        "subjects = (\"physics\", \"chemistry\", \"english\", \"math\", \"biology\") # is a tupple because of the () brackets\n",
+        "subjects_list = list(subjects)                    # naming the tupple as a variable then converting into a list\n",
+        "subjects_list.append(\"literature\")\n",
+        "subjects = tuple(subjects_list)\n",
+        "print(subjects)                                   # can leave it at this\n",
+        "print(subjects, \"-->\", len(subjects), \"subjects\") # if iw count the number of elements inside the list too\n",
+        "\n",
+        "work_ids = [10, 6, 7, 8 ,9, 3]\n",
+        "sorted_ids = sorted(work_ids, reverse = True)     # sorted() sorts it acsending order\n",
+        "                                                  # reverse=True tells python to sort in descending order\n",
+        "                                                  # reverse=False sorts in ascending ordrer\n",
+        "print(sorted_ids)\n",
+        "sorted_ids. clear()\n",
+        "print(sorted_ids)\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "Dadse1fjgSZ7",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0a3f7841-6963-4bf3-fe56-93bdd96d73b9"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['orange', 'banana', 'tomato']\n",
+            "('physics', 'chemistry', 'english', 'math', 'biology', 'literature')\n",
+            "('physics', 'chemistry', 'english', 'math', 'biology', 'literature') --> 6 subjects\n",
+            "[10, 9, 8, 7, 6, 3]\n",
+            "[]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "desc_list = list(range(15, 0, -3))\n",
+        "asc_list = [2 * i for i in range(1,15)]           # much easier to do compared to using the first method\n",
+        "print(\"desc\", desc_list)\n",
+        "print(\"asc\", asc_list)\n",
+        "\n",
+        "combined_list = desc_list + asc_list\n",
+        "even_numbers, odd_numbers = [], []                # creating the 2 lists\n",
+        "for num in combined_list:\n",
+        "    if num % 2 == 0:                              # if divisible by 2 with a leftover amount of 0, it means its an even number\n",
+        "                                                  # sorting out the even & the odd\n",
+        "        even_numbers.append(num)\n",
+        "    else:\n",
+        "        odd_numbers.append(num)\n",
+        "print(\"even\", even_numbers)\n",
+        "print(\"odd\", odd_numbers)\n",
+        "\n",
+        "fruits_list = [\"apple\", \"banana\", \"orange\", \"banana\", \"apple\"]\n",
+        "fruits_count = {}                                 # is a dictionary because it uses {}, empty dictionary\n",
+        "for fruit in fruits_list:                         # taking each fruit from fruits_list at a time to go through\n",
+        "    fruits_count[fruit] = fruits_count.get(fruit,0) +1    # since the dictionary empty, it has never seen any fruit b4, so the original count will be 0\n",
+        "                                                          # after it sees the 2nd banana, then itll rmb & the count will be 1+1\n",
+        "print(fruits_count)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vI4TQYBy0S_3",
+        "outputId": "edabcc59-c827-42e6-ac1f-6aac1497348c"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "desc [15, 12, 9, 6, 3]\n",
+            "asc [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]\n",
+            "even [12, 6, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]\n",
+            "odd [15, 9, 3]\n",
+            "{'apple': 2, 'banana': 2, 'orange': 1}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "school_records = {\n",
+        "    \"S01\": {\"name\": \"Xaylin\", \"scores\": {\"math\": 88, \"english\": 48, \"science\": 43}},\n",
+        "    \"S02\": {\"name\": \"Heidi\", \"scores\": {\"math\": 45, \"english\": 40, \"science\": 51}},\n",
+        "    \"S03\": {\"name\": \"Kimi\", \"scores\": {\"math\": 59, \"english\": 77, \"science\": 62}},\n",
+        "    \"S04\": {\"name\": \"Wenxuan\", \"scores\": {\"math\": 80, \"english\": 70, \"science\": 90}},\n",
+        "    }\n",
+        "\n",
+        "def average(scores):\n",
+        "    return sum(scores.values())/len(scores)\n",
+        "\n",
+        "def letter_grade(avg):\n",
+        "    if avg >= 70:\n",
+        "        return \"A\"\n",
+        "    elif avg >= 60:\n",
+        "        return \"B\"\n",
+        "    elif avg >= 50:\n",
+        "        return \"c\"\n",
+        "    else:\n",
+        "        return \"F\"\n",
+        "\n",
+        "class_average = {}\n",
+        "print(f\"{'iD':<4} {'name':<6} {'avg':>6} grade\")\n",
+        "for student_id, info in school_records.items():\n",
+        "  avg = average(info[\"scores\"])\n",
+        "  class_average[info[\"name\"]] = avg             # the dictionary where uw to save e averages\n",
+        "                                                # info[name] gets the students name from the dictionary\n",
+        "                                                # avg gets the average calculated from the prev line\n",
+        "  print(f\"{student_id:<4} {info['name']:<6} {avg:>6.1f} {letter_grade(avg)}\")\n",
+        "\n",
+        "best = max(class_average, key=class_average.get)\n",
+        "print(f\"\\nClass average: {sum(class_average.values()) / len(class_average):.1f}\")\n",
+        "print(f\"Best student: {best} ({class_average[best]:.1f})\")\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g-eN4Dh70S0s",
+        "outputId": "1be3e494-c474-4247-bd95-a63901252cee"
+      },
+      "execution_count": 48,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "iD   name      avg grade\n",
+            "S01  Xaylin   59.7 c\n",
+            "S02  Heidi    45.3 F\n",
+            "S03  Kimi     66.0 B\n",
+            "S04  Wenxuan   80.0 A\n",
+            "\n",
+            "Class average: 62.8\n",
+            "Best student: Wenxuan (80.0)\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
